@@ -16,3 +16,71 @@ TypeScript is a devlopment tool for JavaScript.When we write rew javaScript it h
 
 1. we can't see the result/output in the typeScript.We have to convert it in a javaScript and then we have to see the output of our code.The commend of converting typeScript to javaScript is:
         tsc TS_File_Name
+
+
+## Functions in TypeScript:
+
+1. we need to set Data type in the function because it's a good practice.
+
+2. In typeScript we have to declare what kind of function and peramitar's are we taking.
+        
+        function addTwo(num: Number):Number {
+                return num + 2
+        }
+        
+        console.log(addTwo(8))
+
+
+        // In the peramitar we declare the type of peramitar by saying it's Data type.
+
+        // In this function after the parenthesis  we declare the type of function by saying it's Data type.
+
+        // If the function is not going to return anything, we need to set void Data type declaretion in that funcion.
+
+        // When we are not going to return anything and throw a error, we need to set naver Data type declaretion in that funcion. It's commonly used in handling Error function.
+        
+                function handleError(errormsg: string): naver{
+                        throw new Error(errormsg)
+                }
+
+## Passing obj in the function:
+
+1. Passing obj in the function  is requred some syntex:
+
+        function createObj():{Name: string, price: number}{
+                return {Name: ReactJs, price: 599}
+        }
+
+        createObj() //output: {Name: ReactJs, price: 599}
+
+        
+
+        // In this function we set an obj as a Data type after the parenthesis and before the definition
+
+2. Passing obj in the function peramitar is requred some syntex also:
+
+## Have to read decoment's for this;
+
+
+
+
+
+
+
+
+
+## Type Aliases in functions:
+
+1. we can set obj property in the function peramiter as many as we want with the help of Type Aliases :
+
+        type Number = {
+                ex: number;
+                Current: number;
+        }
+
+        function printNumber(details: Number){
+                console.log("my ex number is:"+ details.ex)
+                console.log("my Current number is:"+ details.Current)
+        }
+
+        printNumber({ex:123, Current:456})
